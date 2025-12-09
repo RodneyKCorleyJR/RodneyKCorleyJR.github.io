@@ -49,6 +49,8 @@
         <article class="card">
           <h3>Completed Lessons</h3>
           <p>12</p>
+		<!-- Progress Bar plugin target -->
+			<div id="lesson-progress"></div>
         </article>
         <article class="card">
           <h3>Streak</h3>
@@ -59,7 +61,7 @@
           <p>1,250</p>
         </article>
       </div>
-    </section>
+	</section>
 
     <!-- Leaderboard preview -->
     <section class="section" aria-labelledby="leaderboard-title">
@@ -140,9 +142,19 @@
           </div>
       </div>
     </footer>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-circle-progress/1.2.2/circle-progress.min.js"></script>
+	<script>
+		$("#lesson-progress").circleProgress({
+			value: 0.75, // 75% complete
+			size: 120,
+			fill: {color: "#60a5fa"}
+		});
+	</script>
 </body>
 
 </html>
+
 
 
 
