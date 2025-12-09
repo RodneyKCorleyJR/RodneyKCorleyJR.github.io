@@ -149,15 +149,29 @@
 	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-circle-progress/1.2.2/circle-progress.min.js"></script>
 	<script>
+		// Completed Lessons
 		$("#lesson-progress").circleProgress({
 			value: 0.75, // 75% complete
 			size: 120,
-			fill: {color: "#60a5fa"}
+			fill: {color: "#60a5fa"} // blue
+		});
+		// Streak
+		$("#lesson-progress").circleProgress({
+			value: 0.5, // 50% complete of a 14-day streak
+			size: 120,
+			fill: {color: "#10b981"} // green
+		});
+		// Total Points
+		$("#lesson-progress").circleProgress({
+			value: 0.9, // 90% complete of a 1400-point goal
+			size: 120,
+			fill: {color: "#f59e0b"} // amber
 		});
 	</script>
 </body>
 
 </html>
+
 
 
 
