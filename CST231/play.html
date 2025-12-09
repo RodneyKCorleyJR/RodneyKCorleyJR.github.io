@@ -131,7 +131,7 @@
 	<script>
 		$("#load-tip").on("click", function() {
 			$.ajax({
-				url: "https://api/adviceslip.com/advice", // external API
+				url: "https://api.adviceslip.com/advice", // external API
 				method: "GET",
 				success: function(data) {
 					const advice = JSON.parse(data).slip.advice;
@@ -146,6 +146,7 @@
 </body>
 
 </html>
+
 
 
 
