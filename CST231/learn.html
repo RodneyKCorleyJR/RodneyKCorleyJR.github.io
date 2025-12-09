@@ -51,31 +51,33 @@
         Move through HTML, CSS, and JavaScript tracks with short, focused lessons.
         Each lesson introduces a concept, provides a guided exercise, and ends with a challenge gate.
       </p>
-      <div class="card-grid mt-1">
-        <article class="card">
-          <h3>HTML Foundations</h3>
-          <ul>
-            <li>Semantic tags: header, nav, main, footer</li>
-            <li>Links, images, and lists</li>
-            <li>Forms and inputs</li>
-          </ul>
-        </article>
-        <article class="card">
-          <h3>CSS Basics & Layout</h3>
-          <ul>
-            <li>Selectors and properties</li>
-            <li>Flexbox and Grid</li>
-            <li>Responsive thinking</li>
-          </ul>
-        </article>
-        <article class="card">
-          <h3>JavaScript Essentials</h3>
-          <ul>
-            <li>Variables and functions</li>
-            <li>DOM and events</li>
-            <li>Async basics</li>
-          </ul>
-        </article>
+      <div id="lesson-accordion">
+		  <h3>HTML Foundations</h3>
+		  <div>
+			  <ul>
+				  <li>Semantic tags: Header, Nav, Main, Footer</li>
+				  <li>Links, Images, and Lists</li>
+				  <li>Forms and Inputs</li>
+			  </ul>
+		  </div>
+
+		  <h3>CSS Basics & Layout</h3>
+		  <div>
+			  <ul>
+				  <li>Selectors and Properties</li>
+				  <li>Flexbox and Grid</li>
+				  <li>Responsive Thinking</li>
+			  </ul>
+		  </div>
+
+		  <h3>JavaScript Essentials</h3>
+		  <div>
+			  <ul>
+				  <li>Variables and Functions</li>
+				  <li>DOM and Events</li>
+				  <li>Async Basics</li>
+			  </ul>
+		  </div>
       </div>
     </section>
 
@@ -192,8 +194,18 @@
           </div>
       </div>
     </footer>
+
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+	<script src="https://code.jquery.com/ui/1.13.2.jquery-ui.js"></script>
+	<script>
+		$(function() {
+			$("#lesson-accordion").accordion();
+		});
+	</script>
 </body>
 </html>
+
 
 
 
