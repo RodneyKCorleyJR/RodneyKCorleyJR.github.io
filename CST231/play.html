@@ -57,6 +57,9 @@
     <!-- Demonstrates forms and sensible dimensions; will be wired in later milestones -->
     <section class="section" aria-labelledby="controls-title">
       <h2 id="controls-title"><i class="fa-solid fa-sliders"></i> Challenge Controls</h2>
+		<div id="coding-tip">Click the button to get a coding tip!</div>
+		<button id="load-tip">Get Coding Tip</button>
+	
       <form>
         <label for="difficulty">Difficulty</label>
         <select id="difficulty" name="difficulty">
@@ -123,9 +126,27 @@
           </div>
       </div>
     </footer>
+
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script>
+		$("#load-tip").on("click", function() {
+			$.ajax({
+				url: "https://api/adviceslip.com/advice", // external API
+				method: "GET",
+				success: function(data) {
+					const advice = JSON.parse(data).slip.advice;
+					$("#coding-tip").text(advice);
+				},
+				error: function() {
+					$("#coding-tip").text("Could not load tip. Try again!");
+				}
+			});
+		});									  
+	</script>
 </body>
 
 </html>
+
 
 
 
