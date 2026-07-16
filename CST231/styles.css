@@ -164,7 +164,7 @@ main {
 	background: var(--primary);
 	font-weight: 600;
 }
-.btn-secondary {background: transparent; color: var(--text);}
+.btn.secondary {background: transparent; color: var(--text);}
 
 .card-grid {
 	display: grid;
